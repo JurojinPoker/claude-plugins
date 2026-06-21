@@ -32,9 +32,19 @@ repo's writing-profile.
    If found, emit in **that** format using **those** components and import rules.
    If not found, emit clean Markdown and tell the user no profile was detected.
 
+## Before drafting: clarify the goal and CTA
+
+There is no default CTA. **Confirm with the user, up front, what this piece is
+for and what action it should drive** (download, upgrade to a bundle, join
+Discord, read /pricing, etc.). Settle the goal/CTA before writing — it shapes the
+whole piece. If the user hasn't said, ask.
+
 ## Then
 
 - Draft the piece following the template's structure and the brand voice.
+- Never quote prices or bundle amounts — link to `/pricing` instead.
+- Frame poker as gaming, not gambling; don't position against trackers (they
+  complement Jurojin); don't imply casino partnership or guarantee account safety.
 - Render it through the repo profile (e.g. Strapi markdown shortcodes vs
   JurojinWeb React/MDX component imports).
 - Keep claims grounded in the brand doc. If something required isn't covered
