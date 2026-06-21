@@ -141,6 +141,21 @@ varies by room** — never claim universal support.
 <!-- TODO: derive concrete on-brand / off-brand example sentences LATER, from real
      written pieces (owner prefers to extract templating from actual copy). -->
 
+### Signature phrases & tone words
+
+On-site claims to reach for (use **selectively**, never stacked; the sustained
+positioning statement above takes precedence):
+
+- "The Ultimate Multi Table Software"
+- "Every hand, under control." / "comfort, focus, and precision to every hand you play."
+- "Play poker like the pros do it"
+- "Optimize Organization with the Best Tiling Engine in the Market"
+- "Everything you need to Crush the Tables!"
+- "Start Grinding for FREE" (download/free-tier CTA flavor)
+
+Recurring tone words: *comfort, focus, precision, control, grind, crush,
+multi-tabling, efficiency, flow*.
+
 ## CTAs — decided per piece, up front
 
 There is **no single canonical CTA**. The right CTA depends on the piece. **Part

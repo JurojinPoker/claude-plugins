@@ -33,6 +33,10 @@ repo's writing-profile.
    If found, emit in **that** format using **those** components/import rules, and
    actively use the available custom elements (preview cards, CTA banners, video
    embeds, feature tables…) to support the narrative — not just prose.
+   **If the profile declares a publication pipeline or command for full articles**
+   (a blog post, a help-center entry, etc.), **defer to that pipeline** for those
+   pieces instead of drafting standalone — it owns metadata, validation and
+   publishing, and will call back here for the body.
    If **not** found: tell the user no profile was detected, **offer to scaffold
    `.claude/writing-profile.md`** from the template
    (`https://raw.githubusercontent.com/JurojinPoker/claude-plugins/main/examples/writing-profile.template.md`),
@@ -48,7 +52,7 @@ user hasn't specified one, ask before writing:
 2. **Length** — approximate target:
    - **Short** ≈ 500 words
    - **Medium** ≈ 1000 words
-   - **Long** ≈ 1300 words
+   - **Long** ≈ 1500 words
    Treat as a guide, not a hard cap; serve the objective.
 3. **CTA** — there is no default. Confirm the action it should drive (download,
    upgrade to a bundle, join Discord, read /pricing, etc.).
