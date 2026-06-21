@@ -1,0 +1,8 @@
+{
+  "name": "jurojin-writing",
+  "version": "0.1.0",
+  "description": "Writing skill grounded in Jurojin brand knowledge. Produces guides, FAQs, release news and CTAs, rendering to each consuming repo's format via a local writing-profile.",
+  "author": {
+    "name": "Jurojin"
+  }
+}

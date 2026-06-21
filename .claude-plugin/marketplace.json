@@ -1,0 +1,17 @@
+{
+  "name": "jurojin",
+  "owner": {
+    "name": "Jurojin"
+  },
+  "metadata": {
+    "description": "Jurojin Claude Code plugins (shared skills + brand knowledge for writing).",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "jurojin-writing",
+      "source": "./jurojin-writing",
+      "description": "Writing skill (guides, FAQs, release news, CTAs) grounded in Jurojin brand knowledge. Renders to each repo's format via a local writing-profile."
+    }
+  ]
+}
