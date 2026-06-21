@@ -61,6 +61,26 @@ The skill reads this cheat sheet and emits the correct syntax for the active rep
 so it can enrich the piece with the resources actually available. See the
 filled-in examples in `examples/writing-profile.*.md`.
 
+## Writing profile (per-repo contract)
+
+Every consuming repo **must** provide a writing profile — the local adapter that
+tells the skill *how to render*. It is created and committed **in the consumer
+repo**, not here.
+
+- **Canonical path:** `.claude/writing-profile.md` (fallback: `docs/writing-profile.md`).
+  This is exactly where the skill looks.
+- **Required sections:**
+  1. **Output format** — target language/CMS and rendering notes.
+  2. **Resources & components** — the cheat sheet (standard + custom elements).
+  3. **Conventions** — imports, frontmatter/metadata, link schemes, limits.
+  4. **Example** — a short rendered snippet.
+- **How to create one:**
+  - Start from `examples/writing-profile.template.md` (blank skeleton), or
+  - copy the closest filled example: `examples/writing-profile.jurojinweb.md`
+    (React/JSX) or `examples/writing-profile.strapi.md` (markdown CMS).
+  - If the skill runs in a repo with no profile, it will offer to scaffold one
+    from the template.
+
 ## Install (manual, once per machine)
 
 ```

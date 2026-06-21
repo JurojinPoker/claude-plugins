@@ -32,8 +32,11 @@ repo's writing-profile.
    - `docs/writing-profile.md`
    If found, emit in **that** format using **those** components/import rules, and
    actively use the available custom elements (preview cards, CTA banners, video
-   embeds, feature tables…) to support the narrative — not just prose. If not
-   found, emit clean Markdown and tell the user no profile was detected.
+   embeds, feature tables…) to support the narrative — not just prose.
+   If **not** found: tell the user no profile was detected, **offer to scaffold
+   `.claude/writing-profile.md`** from the template
+   (`https://raw.githubusercontent.com/JurojinPoker/claude-plugins/main/examples/writing-profile.template.md`),
+   and meanwhile emit clean Markdown.
 
 ## Before drafting: set the brief
 
