@@ -14,8 +14,7 @@ repo's writing-profile.
 
 1. **Brand knowledge.** Load the brand doc so the copy is accurate and on-voice.
    - Prefer the latest published copy (fetch):
-     `https://raw.githubusercontent.com/JurojinPoker/juro-claude-plugins/main/business.md`
-     <!-- TODO: confirm org/repo if the remote differs from JurojinPoker/juro-claude-plugins -->
+     `https://raw.githubusercontent.com/JurojinPoker/claude-plugins/main/business.md`
    - If there is no network, fall back to the bundled copy at
      `${CLAUDE_PLUGIN_ROOT}/business.md`.
 

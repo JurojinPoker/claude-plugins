@@ -1,4 +1,4 @@
-# juro-claude-plugins
+# claude-plugins
 
 Jurojin's Claude Code **plugin marketplace**. A marketplace is just a git repo
 that lists plugins; this one hosts shared skills + brand knowledge so multiple
@@ -32,7 +32,7 @@ examples/
 ## Install (manual, once per machine)
 
 ```
-/plugin marketplace add JurojinPoker/juro-claude-plugins
+/plugin marketplace add JurojinPoker/claude-plugins
 /plugin install jurojin-writing@jurojin
 ```
 
@@ -55,7 +55,7 @@ enable the plugin so a session installs it on startup:
 {
   "extraKnownMarketplaces": {
     "jurojin": {
-      "source": { "source": "github", "repo": "JurojinPoker/juro-claude-plugins" }
+      "source": { "source": "github", "repo": "JurojinPoker/claude-plugins" }
     }
   },
   "enabledPlugins": {
@@ -82,6 +82,5 @@ enable the plugin so a session installs it on startup:
 - cloud runs + the skill's runtime fetch pick it up immediately;
 - local installs get it on the next `/plugin marketplace update jurojin`.
 
-If the **remote org/repo differs** from `JurojinPoker/juro-claude-plugins`,
-update the raw URL in `jurojin-writing/skills/write-content/SKILL.md` and the
-commands above.
+Remote: `JurojinPoker/claude-plugins`. The raw URL the skill fetches is
+`https://raw.githubusercontent.com/JurojinPoker/claude-plugins/main/business.md`.
