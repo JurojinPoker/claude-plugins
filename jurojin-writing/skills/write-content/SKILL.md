@@ -14,30 +14,44 @@ repo's writing-profile.
 
 1. **Brand knowledge.** Load the brand doc so the copy is accurate and on-voice.
    - Prefer the latest published copy (fetch):
-     `https://raw.githubusercontent.com/JurojinPoker/claude-plugins/main/business.md`
-   - If there is no network, fall back to the bundled copy at
-     `${CLAUDE_PLUGIN_ROOT}/business.md`.
+     `https://raw.githubusercontent.com/JurojinPoker/claude-plugins/main/jurojin-writing/business.md`
+   - If there is no network, fall back to the bundled `business.md` at this
+     plugin's root (the directory two levels up from this SKILL.md).
 
 2. **The piece template.** Read the format-neutral template for what you are
-   writing, from `${CLAUDE_PLUGIN_ROOT}/jurojin-writing/skills/write-content/templates/`:
+   writing, from the `templates/` folder next to this SKILL.md:
    - `faq.md` — FAQ entries
    - `news.md` — release / news posts
    - `guide.md` — how-to / help guides
    These describe **structure and voice only**, not how to render.
 
 3. **The repo writing-profile.** Look for a repo-local profile that declares the
-   output format and available components. Check, in order:
+   output format and a **components cheat sheet** (standard + custom elements).
+   Check, in order:
    - `.claude/writing-profile.md`
    - `docs/writing-profile.md`
-   If found, emit in **that** format using **those** components and import rules.
-   If not found, emit clean Markdown and tell the user no profile was detected.
+   If found, emit in **that** format using **those** components/import rules, and
+   actively use the available custom elements (preview cards, CTA banners, video
+   embeds, feature tables…) to support the narrative — not just prose. If not
+   found, emit clean Markdown and tell the user no profile was detected.
 
-## Before drafting: clarify the goal and CTA
+## Before drafting: set the brief
 
-There is no default CTA. **Confirm with the user, up front, what this piece is
-for and what action it should drive** (download, upgrade to a bundle, join
-Discord, read /pricing, etc.). Settle the goal/CTA before writing — it shapes the
-whole piece. If the user hasn't said, ask.
+Settle these three with the user **up front** — they shape the whole piece. If the
+user hasn't specified one, ask before writing:
+
+1. **Objective** — what the piece is for (educate, rank for SEO, announce a
+   feature, convert, onboard, etc.). One clear primary objective.
+2. **Length** — approximate target:
+   - **Short** ≈ 500 words
+   - **Medium** ≈ 1000 words
+   - **Long** ≈ 1300 words
+   Treat as a guide, not a hard cap; serve the objective.
+3. **CTA** — there is no default. Confirm the action it should drive (download,
+   upgrade to a bundle, join Discord, read /pricing, etc.).
+
+Restate the agreed objective / length / CTA back briefly before drafting, so the
+brief is explicit.
 
 ## Then
 

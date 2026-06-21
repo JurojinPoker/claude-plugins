@@ -1,41 +1,83 @@
 # Writing profile — Blog / Strapi CMS (example)
 
-Copy this into the **blog (Strapi)** repo as `.claude/writing-profile.md` and
-adjust to the real CMS resources. The `jurojin-writing` skill reads this to know
+Copy this into the **blog (Strapi)** repo as `.claude/writing-profile.md` and keep
+it in sync with the blog renderer. The `jurojin-writing` skill reads this to know
 *how to render* what it writes here.
 
 ## Output format
 
-- Target: **Markdown for the Strapi CMS** (rich-text / markdown field).
-- Renders on the web through the blog's component mapping — write the markdown +
-  shortcodes the renderer understands, not React.
+- Target: **Markdown for the Strapi CMS** (the `shared.rich-text` body field).
+- Renders on the web through the blog's custom renderer — write markdown + the
+  custom shortcodes below, not React.
+- Articles are created in **draft** (`publishedAt: null`); never auto-publish.
 
-## Available resources / shortcodes
+## Resources & components (cheat sheet)
 
-<!-- TODO: replace with the real shortcodes/blocks the renderer supports. -->
+> The custom elements only work in the Jurojin blog renderer, not in plain
+> markdown editors. Source of truth for these: Notion → "Markdown Reference —
+> Jurojin Blog Writer Agent".
 
-| Intent | Shortcode / block | Example |
-|--------|-------------------|---------|
-| Callout / note | `:::callout{type="info"}` ... `:::` | info / warning / tip |
-| Accordion (FAQ) | `:::accordion` with `### Question` items | one `###` per question |
-| Image | `![alt](/uploads/...)` or media block | use uploaded media ids |
-| CTA block | `:::cta{href="..."}` Label `:::` | canonical CTA wording |
-| Code / steps | standard markdown ordered list | numbered steps |
+### Standard elements
+
+| Syntax | Result |
+|--------|--------|
+| `**text**` | Bold |
+| `` `text` `` | Inline code |
+| `:emoji:` | Emoji |
+| `# H1` / `## H2` / `### H3` | Headings (max 3 levels) |
+| `---` | Divider |
+| `> text` / `> - Author` | Blockquote (optional attribution) |
+| `![Alt](https://url)` | Small image |
+| `[text](https://url)` | Link |
+
+### Custom elements ⚠️ (Jurojin renderer only)
+
+| Syntax | Result — when to use |
+|--------|----------------------|
+| `==text==` | Highlight — colored background on text |
+| `[bigText \| ctaText](https://url)` | Link Banner — full-width banner with CTA button (standard final CTA) |
+| `[preview](https://jurojinpoker.com/en/solution/SLUG)` | PreviewPage widget — visual card with thumbnail, title, description of the target |
+| `\|\|https://video-url\|\|` | Horizontal video embed |
+| `\|\|short:https://video-url\|\|` | Vertical video embed (shorts/mobile) |
+| `[x](https://x.com/user/status/...)` | X/Twitter post embed |
+| `[features](SITE-SLUG)` | Auto-generated table of Jurojin features for that room |
+| `[[JC]]` `[[KS]]` … | Playing-card visual (Rank A K Q J T 9…2 / Suit H D C S) |
+
+Usage notes:
+- `[features](SITE-SLUG)` valid slots: `ggpoker`, `pokerstars`, `888poker`,
+  `partypoker`, `wpn`, `ipoker`, `winamax`, `chico`, `natural8`
+  (full list: https://jurojinpoker.com/features).
+- Standard final CTA for `news`: `[Haven't tried Jurojin yet?|Download Now](https://jurojinpoker.com)`.
 
 ## Conventions
 
-- Frontmatter the CMS expects (title, slug, excerpt, cover) goes at the top.
-  <!-- TODO: list the exact fields. -->
-- Reference uploaded media by the CMS path/id; flag a missing asset as `TODO:`.
-- Keep to markdown + supported shortcodes; raw HTML may be stripped/sanitized.
-  <!-- TODO: confirm whether raw HTML is allowed. -->
+- Frontmatter / Strapi fields the article needs: `title`, `slug`, `coverUrl`,
+  `coverAlt`, `metaTitle`, `metaDescription`, `metaKeywords`, `wordCount`,
+  `hasTableOfContent`, `lang` (ID), `blocks` (dynamic zone). See the blog repo's
+  own docs for the full schema.
+- H2 for main sections, H3 for subsections; `---` between main sections.
+- Bullets: max 6–7 per list. Images always with descriptive alt + filename title.
 
-## Example (FAQ entry rendered here)
+## Example (news body excerpt rendered here)
 
 ```markdown
-:::accordion
-### Do my room plugins update automatically?
-Yes — your plugins update when you launch Jurojin. If one is missing, see
-[Reinstalling plugins](/help/reinstalling-plugins).
-:::
+- *Key point in italic.*
+
+---
+
+Opening paragraph: context of the announcement, why it matters.
+
+[features](wpt)
+
+## Feature 1: Name
+
+What it is and the concrete benefit for the grinder.
+
+[preview](https://jurojinpoker.com/en/solution/betsizes-overlay)
+
+---
+
+# Get Started
+
+[Haven't tried Jurojin yet?|Download Now](https://jurojinpoker.com)
 ```

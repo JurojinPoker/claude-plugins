@@ -3,10 +3,8 @@
   "owner": {
     "name": "Jurojin"
   },
-  "metadata": {
-    "description": "Jurojin Claude Code plugins (shared skills + brand knowledge for writing).",
-    "version": "0.1.0"
-  },
+  "description": "Jurojin Claude Code plugins (shared skills + brand knowledge for writing).",
+  "version": "0.1.0",
   "plugins": [
     {
       "name": "jurojin-writing",
