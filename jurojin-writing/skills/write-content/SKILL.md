@@ -57,6 +57,11 @@ user hasn't specified one, ask before writing:
 3. **CTA** — there is no default. Confirm the action it should drive (download,
    upgrade to a bundle, join Discord, read /pricing, etc.).
 
+4. **Language** — default is **English**. If the user specifies a different
+   language for the piece, write in that language throughout (including headings,
+   CTAs, and any UI labels). Do not ask about language unless the user's request
+   is ambiguous about it.
+
 Restate the agreed objective / length / CTA back briefly before drafting, so the
 brief is explicit.
 
